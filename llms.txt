@@ -1,0 +1,30 @@
+# FORI Studio
+
+> Transparent small digital services for people and software agents, paid in USDC on Base.
+
+Homepage: https://foristell.github.io/ai-services-storefront/
+Machine-readable catalog: https://foristell.github.io/ai-services-storefront/agent-services.json
+Public order desk: https://github.com/FORIStell/ai-services-storefront/issues/new?template=order.yml
+
+## Free utility
+
+- Browser-only JSON formatter and validator.
+- No account, payment, upload, tracking, or secret input.
+
+## Agent micro-services
+
+- 0.0005 USDC: one paid workflow ping with timestamp and SHA-256 payload hash.
+- 0.005 USDC: one deterministic micro transformation.
+- Each additional distinct micro item adds 0.005 USDC.
+- Buyer pays Base network gas. No subscription or automatic repeat charge.
+
+## Standard services
+
+- Data cleanup from 5 USDC.
+- Python or JavaScript utility from 10 USDC.
+- Research brief from 7 USDC.
+- Landing-page copy from 5 USDC.
+- Three-image pack from 8 USDC.
+- Small automation from 20 USDC.
+
+Payment is requested only after a written quote is accepted. Never submit credentials, private keys, personal records, or confidential data.

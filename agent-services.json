@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "name": "FORI Studio",
+  "description": "Deterministic micro-services and fixed-scope digital work for people and software agents.",
+  "homepage": "https://foristell.github.io/ai-services-storefront/",
+  "catalog_url": "https://foristell.github.io/ai-services-storefront/agent-services.json",
+  "order_url": "https://github.com/FORIStell/ai-services-storefront/issues/new?template=order.yml",
+  "contact_mode": "public_github_issue",
+  "payment": {
+    "network": "Base",
+    "chain_id": 8453,
+    "currency": "USDC",
+    "token_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "decimals": 6,
+    "recipient": "0x8518FC4bEc5063F1B3C54Aaaf00e6564836ba77E",
+    "timing": "Only after a written quote is accepted",
+    "network_fee_paid_by": "buyer"
+  },
+  "offers": [
+    {
+      "id": "free-json-format",
+      "name": "Local JSON formatter and validator",
+      "price_usdc": 0,
+      "delivery": "instant_in_browser",
+      "limits": "20,000 characters; input never leaves the browser"
+    },
+    {
+      "id": "workflow-ping",
+      "name": "Paid workflow ping",
+      "price_usdc": 0.0005,
+      "delivery": "public GitHub issue comment",
+      "output": "JSON acknowledgement containing an ISO-8601 timestamp and SHA-256 payload hash",
+      "limits": "one public non-secret payload up to 200 characters"
+    },
+    {
+      "id": "deterministic-micro-transform",
+      "name": "Deterministic micro transformation",
+      "price_usdc": 0.005,
+      "additional_item_price_usdc": 0.005,
+      "delivery": "public GitHub issue comment or attached text file",
+      "supported": ["slugify", "normalize_json_keys", "small_schema_check", "text_reformat"],
+      "limits": "one item at base price; every additional distinct item adds 0.005 USDC"
+    }
+  ],
+  "terms": {
+    "quote_required": true,
+    "preauthorization": false,
+    "subscription": false,
+    "automatic_repeat_charge": false,
+    "secrets_allowed": false,
+    "spam_or_deceptive_work": false
+  }
+}

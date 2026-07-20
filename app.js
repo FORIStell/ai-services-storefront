@@ -7,9 +7,45 @@ const deadline = document.querySelector("#deadline");
 const acceptance = document.querySelector("#acceptance");
 const status = document.querySelector("#form-status");
 
+const jsonInput = document.querySelector("#json-input");
+const jsonOutput = document.querySelector("#json-output");
+const jsonStatus = document.querySelector("#json-status");
+
+document.querySelector("#format-json").addEventListener("click", () => {
+  try {
+    const parsed = JSON.parse(jsonInput.value);
+    jsonOutput.value = JSON.stringify(parsed, null, 2);
+    jsonStatus.textContent = "Valid JSON. Formatted locally in your browser.";
+  } catch (error) {
+    jsonOutput.value = "";
+    jsonStatus.textContent = `Invalid JSON: ${error.message}`;
+  }
+});
+
+document.querySelector("#copy-json").addEventListener("click", async () => {
+  if (!jsonOutput.value) {
+    jsonStatus.textContent = "Format valid JSON before copying.";
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(jsonOutput.value);
+    jsonStatus.textContent = "Formatted JSON copied.";
+  } catch {
+    jsonOutput.select();
+    jsonStatus.textContent = "Clipboard access was unavailable; the result is selected.";
+  }
+});
+
+document.querySelector("#clear-json").addEventListener("click", () => {
+  jsonInput.value = "";
+  jsonOutput.value = "";
+  jsonStatus.textContent = "Cleared. No network request was made.";
+  jsonInput.focus();
+});
+
 document.querySelectorAll(".choose-service").forEach((button) => {
   button.addEventListener("click", () => {
-    const card = button.closest(".service-card");
+    const card = button.closest(".service-card, .micro-card");
     service.value = card.dataset.service;
     budget.value = `${card.dataset.price} USDC`;
     document.querySelector("#order").scrollIntoView({ behavior: "smooth" });

@@ -9,6 +9,8 @@ body:
     attributes:
       label: Service
       options:
+        - Paid workflow ping (0.0005 USDC)
+        - Deterministic micro transformation (0.005 USDC, +0.005 each additional item)
         - Data cleanup
         - Python or JavaScript utility
         - Research brief

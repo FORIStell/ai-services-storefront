@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FORI Studio — Small digital jobs, shipped fast</title>
-  <meta name="description" content="Affordable Python and JavaScript utilities, research briefs, data cleanup, conversion copy, and AI image packs. Clear scope, fixed quote, fast delivery.">
+  <meta name="description" content="A free browser JSON tool plus transparent bot micro-services, Python and JavaScript utilities, research, data cleanup, copy, and AI image packs paid in Base USDC.">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="FORI Studio — Small digital jobs, shipped fast">
   <meta property="og:description" content="Code, research, data, copy, and AI visuals from $5. Request a written quote before paying.">
@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://foristell.github.io/ai-services-storefront/">
   <meta name="theme-color" content="#08101d">
   <link rel="canonical" href="https://foristell.github.io/ai-services-storefront/">
+  <link rel="alternate" type="application/json" href="agent-services.json" title="FORI Studio machine-readable service catalog">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -19,9 +20,9 @@
     "@type": "ProfessionalService",
     "name": "FORI Studio",
     "url": "https://foristell.github.io/ai-services-storefront/",
-    "description": "Small fixed-scope digital services: code, research, data cleanup, copywriting, and generated visuals.",
+    "description": "A free browser JSON utility and small fixed-scope digital services for people and software agents.",
     "areaServed": "Worldwide",
-    "priceRange": "$5-$35",
+    "priceRange": "Free-$35",
     "paymentAccepted": "USDC on Base"
   }
   </script>
@@ -34,6 +35,8 @@
     </a>
     <nav aria-label="Main navigation">
       <a href="#services">Services</a>
+      <a href="#free-tool">Free tool</a>
+      <a href="#agent-menu">For bots</a>
       <a href="#process">Process</a>
       <a href="#order">Order</a>
     </nav>
@@ -50,7 +53,7 @@
           <a class="button secondary" href="#services">See fixed-price starters</a>
         </div>
         <ul class="trust-row" aria-label="Service benefits">
-          <li>From $5</li>
+          <li>Free tool included</li>
           <li>One revision included</li>
           <li>No payment before quote</li>
         </ul>
@@ -65,6 +68,62 @@ quote      5 USDC
 status     <span class="green">ready to start</span>
 
 <span class="muted">Clear inputs. Verifiable output.</span></code></pre>
+      </div>
+    </section>
+
+    <section class="section tool-section" id="free-tool">
+      <div class="section-heading">
+        <p class="eyebrow">Free, useful, private</p>
+        <h2>Format and validate JSON in your browser.</h2>
+        <p>This tool is genuinely free. The input stays in your browser and is never uploaded. Do not paste secrets anywhere on this site.</p>
+      </div>
+      <div class="json-tool">
+        <label>JSON input
+          <textarea id="json-input" rows="10" maxlength="20000" spellcheck="false" placeholder='{"hello":"agent","items":[3,2,1]}'></textarea>
+        </label>
+        <div class="tool-actions">
+          <button class="button primary" id="format-json" type="button">Format and validate</button>
+          <button class="button secondary" id="copy-json" type="button">Copy result</button>
+          <button class="text-button" id="clear-json" type="button">Clear</button>
+        </div>
+        <label>Result
+          <textarea id="json-output" rows="10" readonly spellcheck="false" placeholder="Validated JSON appears here"></textarea>
+        </label>
+        <p class="form-status" id="json-status" aria-live="polite">Ready. No network request is made.</p>
+      </div>
+    </section>
+
+    <section class="section" id="agent-menu">
+      <div class="section-heading">
+        <p class="eyebrow">Machine-friendly micro menu</p>
+        <h2>Small, disclosed prices for software agents.</h2>
+        <p>These tiny tiers are for deterministic public-data actions that cost almost nothing to fulfill. They never trigger a hidden subscription or an automatic charge.</p>
+      </div>
+      <div class="micro-grid">
+        <article class="micro-card">
+          <span class="micro-price">Free</span>
+          <h3>Local JSON utility</h3>
+          <p>Format and validate JSON above. Unlimited local use, no wallet and no account.</p>
+          <a class="text-button" href="#free-tool">Use free tool</a>
+        </article>
+        <article class="micro-card" data-service="Paid workflow ping" data-price="0.0005">
+          <span class="micro-price">0.0005 USDC</span>
+          <h3>Paid workflow ping</h3>
+          <p>A machine-readable acknowledgement with timestamp and SHA-256 payload hash. One public payload up to 200 characters.</p>
+          <button class="text-button choose-service" type="button">Order ping</button>
+        </article>
+        <article class="micro-card" data-service="Deterministic micro transformation" data-price="0.005">
+          <span class="micro-price">0.005 USDC</span>
+          <h3>Micro transformation</h3>
+          <p>One tiny slug, JSON-key normalization, schema check, or text reformat. Each additional distinct item adds 0.005 USDC.</p>
+          <button class="text-button choose-service" type="button">Order micro task</button>
+        </article>
+      </div>
+      <div class="agent-discovery">
+        <strong>Agent discovery:</strong>
+        <a href="agent-services.json">agent-services.json</a>
+        <a href="llms.txt">llms.txt</a>
+        <span>Base chain ID 8453 · USDC uses 6 decimals · buyer pays network gas</span>
       </div>
     </section>
 
@@ -148,6 +207,8 @@ status     <span class="green">ready to start</span>
         <label>Service
           <select id="service" required>
             <option value="">Choose a service</option>
+            <option>Paid workflow ping</option>
+            <option>Deterministic micro transformation</option>
             <option>Data cleanup</option>
             <option>Python or JavaScript utility</option>
             <option>Research brief</option>

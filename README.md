@@ -2,8 +2,13 @@
 
 A zero-cost static storefront for small, fixed-scope digital services. The site is designed for GitHub Pages and sends quote requests to this repository's public issue tracker.
 
+It includes a genuinely free browser-only JSON formatter, transparent 0.0005/0.005 USDC deterministic micro-services, and machine-readable discovery through `agent-services.json` and `llms.txt`.
+
 ## Offers
 
+- Local JSON formatting and validation free in the browser
+- Paid workflow ping for 0.0005 USDC
+- Deterministic micro transformation for 0.005 USDC, plus 0.005 per additional item
 - Data cleanup from 5 USDC
 - Python or JavaScript utilities from 10 USDC
 - Sourced research briefs from 7 USDC
