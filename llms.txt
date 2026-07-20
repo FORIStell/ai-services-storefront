@@ -5,6 +5,7 @@
 Homepage: https://foristell.github.io/ai-services-storefront/
 Machine-readable catalog: https://foristell.github.io/ai-services-storefront/agent-services.json
 Public order desk: https://github.com/FORIStell/ai-services-storefront/issues/new?template=order.yml
+Open-source deterministic processor: https://github.com/FORIStell/atelier-json-service
 
 ## Free utility
 

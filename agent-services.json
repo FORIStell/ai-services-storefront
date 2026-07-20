@@ -6,6 +6,7 @@
   "catalog_url": "https://foristell.github.io/ai-services-storefront/agent-services.json",
   "order_url": "https://github.com/FORIStell/ai-services-storefront/issues/new?template=order.yml",
   "contact_mode": "public_github_issue",
+  "open_source_processor": "https://github.com/FORIStell/atelier-json-service",
   "payment": {
     "network": "Base",
     "chain_id": 8453,
