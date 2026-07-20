@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://foristell.github.io/ai-services-storefront/sitemap.xml

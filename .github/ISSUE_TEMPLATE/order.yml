@@ -1,0 +1,52 @@
+name: Service quote request
+description: Request a written scope and quote. Do not include secrets or confidential data.
+title: "[Quote request] "
+labels:
+  - order
+body:
+  - type: dropdown
+    id: service
+    attributes:
+      label: Service
+      options:
+        - Data cleanup
+        - Python or JavaScript utility
+        - Research brief
+        - Landing page copy
+        - AI image pack
+        - Small automation
+        - Custom request
+    validations:
+      required: true
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Requested deliverable
+      description: Describe the exact files, format, inputs, and expected result.
+      placeholder: A Python script named clean_orders.py that...
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: Budget
+      placeholder: 10 USDC
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline
+      placeholder: 24 hours or flexible
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance check
+      description: Explain how the delivered work can be objectively verified.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-request safety
+      options:
+        - label: I have not included credentials, private keys, personal records, or confidential information.
+          required: true
+        - label: I understand that payment is requested only after I accept a written quote.
+          required: true
